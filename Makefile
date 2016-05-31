@@ -17,7 +17,8 @@ start :
 	@g++ -c ${_SRC}${_PROC} -I ${_HEAD} \
 		&& echo -e "\e[31m" ${_INST} "\e[0m"
 install :
-	@mv ${_RES} ${_COM}
+	@mv ${_RES} ${_COM} \
+		&& echo -e "\e[31m" ${_MV} "\e[0m"
 
 .PHONY : clean
 clean :
